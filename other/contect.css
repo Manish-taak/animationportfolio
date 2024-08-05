@@ -1,0 +1,97 @@
+/* #FF6DB3 */
+.contect-container{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    justify-content: center;
+    gap:  20px;
+}
+.body-Color{
+    background: linear-gradient(-45deg, #5c3327, #6b2540, #245f36, #0c5e4a);
+	background-size: 400% 400%;
+	animation: bodyAnim 5s ease infinite;
+}
+@keyframes bodyAnim {
+    0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
+.inputs-container{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+    width: 100%;
+}
+.Send-message-text{
+    color: #ff6db3;
+    font-size: 30px;
+}
+input{
+    background-color: #ffffff5d;
+    border-radius: 8px;
+    padding: 20px;
+    width: 100%;
+    color: white;
+    animation: inputsAnima 0.4s linear forwards;
+    transform-origin: top;
+}
+::placeholder {
+    color: white;
+    opacity: 0.8; /* Firefox */
+  }
+@keyframes inputsAnima {
+    0% {
+      transform:  scale(0);
+    }
+    100% {
+      transform:  scale(1);
+    }
+}
+.contact-img{
+    animation: imgAnima 0.4s linear forwards;
+    transform-origin: top;
+    max-width: 800px;
+    width: 100%;
+    z-index: -333;
+}
+@keyframes imgAnima {
+    0% {
+      transform:  scale(0);
+    }
+    100% {
+      transform:  scale(1);
+    }
+}
+#message{
+    width: 100%;
+    margin-top: 10px;
+    padding-bottom: 70px;
+}
+.submit-btn{
+    margin-top: 15px;
+    background-color: #ff6db3;
+    padding: 10px 20px;
+    color: white;
+    font-size: 20px;
+    border-radius: 8px;
+    transition: all 1s;
+}
+.submit-btn:hover{
+    background-color: white;
+    color: #ff6db3;
+}
+@media(max-width: 900px){
+    .contect-container{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column-reverse;
+
+    }
+}

@@ -1,0 +1,78 @@
+.h1{
+    color: white;
+    text-align: center;
+    font-size: 3rem;
+    padding: 45px 0;
+    animation: h1Animation 0.8s ease-in-out forwards;
+}
+@keyframes h1Animation {
+    0% {
+      transform: translateY(-100px) scale(0);
+      opacity: 0;
+    }
+    50%{
+        transform: translateY(10px) scale(1);
+        opacity: 1;   
+    }
+    100% {
+      transform: translateY(0) scale(1);
+      opacity: 1;
+    }
+  }
+.h1Color{
+    color: black;
+}
+.profile-container{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    gap: 30px;
+    height: 50vh;
+}
+.profile-container-NewCss{
+    color: black;
+}
+.profile-piture{
+    /* max-width: 350px;
+    width: 100%; */
+    /* border-radius:0 30px 0 30px ; */
+    transition: all 0.5s;
+}
+
+.profile-piture:hover{
+    transform: translateY(-4px) scale(0.9);
+    filter:drop-shadow( 5px 5px 10px red);
+}
+.profile-details{
+    font-family: "Walter Turncoat", cursive;
+    font-size: 30px;
+    line-height: 60px;
+    max-width: 500px;
+    width: 100%;
+    cursor: default;
+    
+}
+@media(max-width: 800px){
+    .profile-details{
+        /* font-size: 15PX; */
+        line-height: 50PX;
+    }
+}
+@media(max-width: 700px){
+    .profile-container{
+        display: flex;
+        align-items: center;
+        justify-content: start;
+        flex-direction: column-reverse;
+    }
+    .profile-details{
+        font-family: "Walter Turncoat", cursive;
+        font-size: 20px;
+        line-height: 40px;
+        max-width: 500px;
+        width: 100%;
+        cursor: default;
+    }
+}
